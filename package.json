@@ -1,6 +1,6 @@
 {
   "name": "rdxsocket",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "Extremely simple websocket binding designed for integration in redux-saga.",
   "main": "./build/index.js",
   "author": "Blake Lucas <b.g.lucas@tcu.edu>",
