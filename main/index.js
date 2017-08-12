@@ -5,11 +5,10 @@ import {RXSocket} from './socket'
 let socket
 
 function socketEmitter(url, subscriptions, connections) {
-    console.log('Creating event channel')
     return eventChannel( emitter => {
         socket = new RXSocket(url, subscriptions, connections, emitter)
         return () => {
-            console.log('CLOSED')
+            socket.close()
         }
     })
 }

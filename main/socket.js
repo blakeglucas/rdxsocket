@@ -10,6 +10,7 @@ export class RXSocket {
         this.socket.onopen = this.onOpen
         this.socket.onclose = this.onClose
         this.socket.onmessage = this.onMessage
+        this.socket.onerror = this.onError
     }
 
     onOpen = () => {
@@ -53,5 +54,13 @@ export class RXSocket {
 
     makeRequest = (event) => {
         this.socket.dispatchEvent(event)
+    }
+
+    close = () => {
+        this.socket.close()
+    }
+
+    onError = (e) => {
+        throw new Error(e)
     }
 }
