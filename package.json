@@ -1,0 +1,11 @@
+{
+  "name": "redux-socket",
+  "version": "1.0.0",
+  "description": "Extremely simple websocket binding designed for integration in redux-saga.",
+  "main": "./main/index.js",
+  "author": "Blake Lucas <b.g.lucas@tcu.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "redux-saga": "^0.15.6"
+  }
+}
