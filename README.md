@@ -57,9 +57,6 @@ In this example, `actions.request` is the action type dispatched by any componen
 
 Every event in the `events` file should be of type `Event` or `CustomEvent`. RDX Socket can handle `CustomEvent`s with the payload located in the `detail` prop.
 
-### Multiple RDX Sockets
-In the event that multiple WebSockets are needed, a similar method can be used. However, each RDX Socket needs to placed in its own saga, since there is no way to differentiate with `request` method to dispatch, even if multiple `fork(socketHandler, url, subscriptions, connections)` are yielded. Different `actions.request`s need to be created for each websocket, which is why it's recommended to keep all WebSocket communication along one socket if possible.
-
 ### Variable Name Summary
 When learning Redux, it helped me to explain to myself what certainly variables were representing in English (especially with mapStateToProps and mapDispatchToProps). 
 - `subscriptions`: The `requests` I want the socket to **subscribe** to, a.k.a. listen for internally.
@@ -79,4 +76,5 @@ My `WebSocketHandler` is configured to just echo the type when replying to messa
 
 ## Technical Debt
 - Unknown functionality with SockJS or other WebSocket wrappers.
+- Using multiple RDX Socket instances is untested.
 - Unit tests. 
