@@ -1,5 +1,5 @@
 module.exports = {
-    "extends": "standard",
+    "extends": "google",
     "parser": "babel-eslint",
     "ecmaFeatures": {
         "jsx": true,

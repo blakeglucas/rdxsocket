@@ -96,6 +96,6 @@ export class RXSocket {
      * Handles socket errors.
      */
     onError = (e) => {
-        throw new Error(e)
+        throw e
     }
 }
